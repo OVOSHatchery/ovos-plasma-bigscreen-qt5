@@ -163,7 +163,7 @@ FocusScope {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
-                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Education") !== -1;
+                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Graphics") !== -1;
                 }
             }
 
