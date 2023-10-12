@@ -157,8 +157,6 @@ msgstr "Bigscreen було увімкнено загальносистемний
 #~ msgid "Wireless"
 #~ msgstr "Бездротова мережа"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Засіб встановлення можливостей Mycroft"
 
 #~ msgid ""
 #~ "M\n"

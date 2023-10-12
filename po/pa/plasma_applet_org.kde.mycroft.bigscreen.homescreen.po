@@ -154,5 +154,3 @@ msgstr ""
 #~ msgid "Wireless"
 #~ msgstr "ਬੇਤਾਰ"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "ਮਾਈਕਰੋਫਟ ਮੁਹਾਰਤ ਇੰਸਟਾਲਰ"

@@ -154,8 +154,6 @@ msgstr ""
 #~ msgid "Wireless"
 #~ msgstr "Juhtmeta ühendus"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycrofti oskuste paigaldaja"
 
 #~ msgid "Home Screen"
 #~ msgstr "Koduekraan"

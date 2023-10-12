@@ -155,5 +155,3 @@ msgstr "Duży ekran ma włączone zapobieganie usypianiu systemu"
 #~ msgid "Wireless"
 #~ msgstr "Bezprzewodowa"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Wgrywanie umiejętności Mycroft"

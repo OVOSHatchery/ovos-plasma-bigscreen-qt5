@@ -168,24 +168,6 @@ KCM.SimpleKCM {
                         height: parent.height
 
                         Delegates.LocalSettingDelegate {
-                            id: mycroftIntegrationDelegate
-                            implicitWidth: desktopThemeView.view.cellWidth * 3
-                            implicitHeight: desktopThemeView.view.cellHeight
-                            isChecked: kcm.mycroftIntegrationActive() ? 1 : 0
-                            name: "Mycroft Integration"
-                            customType: "mycroftIntegration"
-                            KeyNavigation.up: kcmcloseButton
-                            KeyNavigation.right: pmInhibitionDelegate
-                            KeyNavigation.down: desktopThemeView
-                            onActiveFocusChanged: {
-                                if(activeFocus){
-                                    contentLayout.currentSection = topContentArea
-                                    topContentAreaLayout.contentX = mycroftIntegrationDelegate.x
-                                }
-                            }
-                        }
-
-                        Delegates.LocalSettingDelegate {
                             id: pmInhibitionDelegate
                             implicitWidth: desktopThemeView.view.cellWidth * 3
                             implicitHeight: desktopThemeView.view.cellHeight

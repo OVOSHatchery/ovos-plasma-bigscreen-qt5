@@ -153,6 +153,3 @@ msgstr ""
 
 #~ msgid "Wireless"
 #~ msgstr "Trådløst"
-
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Installationsprogram til Mycroft Skill"

@@ -122,7 +122,7 @@ void ApplicationListModel::loadApplications()
 
                         if (service->isApplication() && !blacklist.contains(service->desktopEntryName()) && service->showOnCurrentPlatform()
                             && !service->property("Terminal", QMetaType::Bool).toBool()) {
-                            QRegularExpression voiceExpr(QStringLiteral("mycroft-gui-app .* --skill=(.*)\\.home"));
+                            QRegularExpression voiceExpr(QStringLiteral("ovos-gui-app .* --skill=(.*)\\.home"));
 
                             if (service->categories().contains(QStringLiteral("VoiceApp")) && voiceExpr.match(service->exec()).hasMatch()) {
                                 QString exec = service->exec();

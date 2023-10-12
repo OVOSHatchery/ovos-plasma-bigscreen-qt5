@@ -154,5 +154,3 @@ msgstr "Bigscreen has enabled system-wide inhibition"
 #~ msgid "Wireless"
 #~ msgstr "Wireless"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft Skill Installer"

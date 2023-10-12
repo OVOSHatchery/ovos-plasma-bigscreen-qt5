@@ -157,5 +157,3 @@ msgstr "Bigscreen-ek sistema osoan inhibizioa gaitu du"
 #~ msgid "Wireless"
 #~ msgstr "Haririk gabekoa"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft trebetasunen instalatzailea"

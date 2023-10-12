@@ -154,9 +154,6 @@ msgstr "Storskärm har aktiverat systemövergripande inhibering"
 #~ msgid "Wireless"
 #~ msgstr "Trådlös"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft Skill installationsverktyg"
-
 #~ msgid "Home Screen"
 #~ msgstr "Hemskärm"
 

@@ -154,9 +154,6 @@ msgstr "Bigscreen heeft systeembreed slapen ingeschakeld"
 #~ msgid "Wireless"
 #~ msgstr "Draadloos"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Installatieprogramma Mycroft Skill"
-
 #~ msgid "Home Screen"
 #~ msgstr "Hoofdscherm"
 

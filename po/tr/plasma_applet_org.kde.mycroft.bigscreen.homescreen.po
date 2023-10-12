@@ -155,5 +155,3 @@ msgstr "Büyük Ekran, sistem genelinde engellemeyi etkinleştirdi"
 #~ msgid "Wireless"
 #~ msgstr "Kablosuz"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft Yetenek Yükleyicisi"

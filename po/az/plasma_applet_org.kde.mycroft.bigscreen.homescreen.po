@@ -154,5 +154,3 @@ msgstr "BöyükEkran sistem miqyasında ləngiməyə səbəb oldu"
 #~ msgid "Wireless"
 #~ msgstr "Simsiz"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft Qabiliyyət Quraşdırıcısı"

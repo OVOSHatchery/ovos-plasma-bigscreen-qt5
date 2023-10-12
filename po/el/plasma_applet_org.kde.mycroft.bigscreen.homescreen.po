@@ -154,5 +154,3 @@ msgstr ""
 #~ msgid "Wireless"
 #~ msgstr "Ασύρματο"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Πρόγραμμα εγκατάστασης Mycroft Skill"

@@ -160,8 +160,5 @@ msgstr ""
 #~ msgid "Wireless"
 #~ msgstr "無線網路"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft Skill 安裝工具"
-
 #~ msgid "Not Ready"
 #~ msgstr "尚未就緒"

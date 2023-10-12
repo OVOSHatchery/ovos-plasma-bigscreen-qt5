@@ -152,5 +152,3 @@ msgstr ""
 #~ msgid "Wireless"
 #~ msgstr "Sans fil"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Installateur de thèmes pour Mycroft"

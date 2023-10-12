@@ -27,14 +27,6 @@ FocusScope {
     Connections {
         target: plasmoid.nativeInterface.bigLauncherDbusAdapterInterface
 
-        onEnableMycroftIntegrationChanged: {
-            mycroftIntegration = plasmoid.nativeInterface.bigLauncherDbusAdapterInterface.mycroftIntegrationActive()
-            if(mycroftIntegration){
-                voiceAppsView.visible = voiceAppsView.count > 0 ? 1 : 0
-            } else {
-                voiceAppsView.visible = false
-            }
-        }
     }
 
     anchors {
@@ -60,31 +52,6 @@ FocusScope {
         }
         //height: parent.height
         spacing: Kirigami.Units.largeSpacing*3
-        
-
-        BigScreen.TileRepeater {
-            id: recentView
-            title: i18n("Recent")
-            compactMode: plasmoid.configuration.expandingTiles
-            model: Kicker.RecentUsageModel {
-                shownItems: Kicker.RecentUsageModel.OnlyApps
-            }
-
-            visible: count > 0
-            currentIndex: 0
-            focus: true
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = recentView
-            delegate: Delegates.AppDelegate {
-                property var modelData: typeof model !== "undefined" ? model : null
-                iconImage: model.decoration
-                text: model.display
-                comment: model.description
-                onClicked: recentView.model.trigger(index, "", null);
-            }
-
-            navigationUp: shutdownIndicator
-            navigationDown: voiceAppsView.visible ? voiceAppsView : appsView
-        }
 
         BigScreen.TileRepeater {
             id: voiceAppsView
@@ -98,7 +65,7 @@ FocusScope {
                 }
             }
 
-            visible: mycroftIntegration && count > 0
+            visible: count > 0
             currentIndex: 0
             focus: false
             onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = voiceAppsView
@@ -107,37 +74,60 @@ FocusScope {
                 
             }
 
-            navigationUp: recentView.visible ? recentView : shutdownIndicator
-            navigationDown: appsView.visible ? appsView : (gamesView.visible ? gamesView : settingsView)
+            navigationUp: shutdownIndicator
+            navigationDown: mediaAppsView.visible ? mediaAppsView : networkAppsView.visible ? networkAppsView : gamesView.visible ? gamesView : graphicsView.visible ? graphicsView : settingsView
         }
 
         BigScreen.TileRepeater {
-            id: appsView
-            title: i18n("Applications")
+            id: mediaAppsView
+            title: i18n("Multimedia")
             compactMode: plasmoid.configuration.expandingTiles
-            visible: count > 0
-            enabled: count > 0
             model: KItemModels.KSortFilterProxyModel {
                 sourceModel: plasmoid.nativeInterface.applicationListModel
                 filterRole: "ApplicationCategoriesRole"
                 filterRowCallback: function(source_row, source_parent) {
-                    var cats = sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole);
-                    return cats.indexOf("Game") === -1 && cats.indexOf("VoiceApp") === -1;
+                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("AudioVideo") !== -1;
                 }
             }
 
+            visible: count > 0
             currentIndex: 0
             focus: false
-            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = appsView
-            delegate: Delegates.AppDelegate {
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = mediaAppsView
+            delegate: Delegates.VoiceAppDelegate {
                 property var modelData: typeof model !== "undefined" ? model : null
-                comment: model.ApplicationCommentRole
+
             }
-            
-            navigationUp: voiceAppsView.visible ? voiceAppsView : recentView.visible ? recentView : shutdownIndicator
-            navigationDown: gamesView.visible ? gamesView : settingsView
+
+            navigationUp: voiceAppsView.visible ? voiceAppsView : shutdownIndicator
+            navigationDown: networkAppsView.visible ? networkAppsView: gamesView.visible ? gamesView : graphicsView.visible ? graphicsView : settingsView
         }
-        
+
+        BigScreen.TileRepeater {
+            id: networkAppsView
+            title: i18n("Network")
+            compactMode: plasmoid.configuration.expandingTiles
+            model: KItemModels.KSortFilterProxyModel {
+                sourceModel: plasmoid.nativeInterface.applicationListModel
+                filterRole: "ApplicationCategoriesRole"
+                filterRowCallback: function(source_row, source_parent) {
+                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Network") !== -1;
+                }
+            }
+
+            visible: count > 0
+            currentIndex: 0
+            focus: false
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = networkAppsView
+            delegate: Delegates.VoiceAppDelegate {
+                property var modelData: typeof model !== "undefined" ? model : null
+
+            }
+
+            navigationUp: mediaAppsView.visible ? mediaAppsView : voiceAppsView.visible ? voiceAppsView : shutdownIndicator
+            navigationDown: gamesView.visible ? gamesView : graphicsView.visible ? graphicsView : settingsView
+        }
+
         BigScreen.TileRepeater {
             id: gamesView
             title: i18n("Games")
@@ -159,7 +149,32 @@ FocusScope {
                 property var modelData: typeof model !== "undefined" ? model : null
             }
             
-            navigationUp: appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator))
+            navigationUp: networkAppsView.visible ? networkAppsView : mediaAppsView.visible ? mediaAppsView : voiceAppsView.visible ? voiceAppsView : shutdownIndicator
+            navigationDown: graphicsView.visible ? graphicsView : settingsView
+        }
+
+        BigScreen.TileRepeater {
+            id: graphicsView
+            title: i18n("Graphics")
+            compactMode: plasmoid.configuration.expandingTiles
+            visible: count > 0
+            enabled: count > 0
+            model: KItemModels.KSortFilterProxyModel {
+                sourceModel: plasmoid.nativeInterface.applicationListModel
+                filterRole: "ApplicationCategoriesRole"
+                filterRowCallback: function(source_row, source_parent) {
+                    return sourceModel.data(sourceModel.index(source_row, 0, source_parent), ApplicationListModel.ApplicationCategoriesRole).indexOf("Education") !== -1;
+                }
+            }
+
+            currentIndex: 0
+            focus: false
+            onActiveFocusChanged: if (activeFocus) launcherHomeColumn.currentSection = graphicsView
+            delegate: Delegates.AppDelegate {
+                property var modelData: typeof model !== "undefined" ? model : null
+            }
+
+            navigationUp: gamesView.visible ? gamesView : networkAppsView.visible ? networkAppsView : mediaAppsView.visible ? mediaAppsView : voiceAppsView.visible ? voiceAppsView : shutdownIndicator
             navigationDown: settingsView
         }
 
@@ -180,7 +195,7 @@ FocusScope {
                 enabled: model.active
             }
             
-            navigationUp: gamesView.visible ? gamesView : (appsView.visible ? appsView : (voiceAppsView.visible ? voiceAppsView : (recentView.visible ? recentView : shutdownIndicator)))
+            navigationUp:  graphicsView.visible ? graphicsView : gamesView.visible ? gamesView : networkAppsView.visible ? networkAppsView : mediaAppsView.visible ? mediaAppsView : voiceAppsView.visible ? voiceAppsView : shutdownIndicator
             navigationDown: null
         }
 

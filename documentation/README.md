@@ -182,7 +182,7 @@ The desktop file can be customized as per the skill authour / application develo
 - Exec: This contains how the voice application will be executed, All voice applications are executed inside of the Mycroft GUI skillview and hence are required to start using the following exec:
 
 ```
-Exec=mycroft-gui-app --hideTextInput --skill=myexampleskill.authorname.home
+Exec=ovos-gui-app --hideTextInput --skill=myexampleskill.authorname.home
 ```
 - Categories: This contains the application category the voice application is part of, to display it correctly under the voice applications section, the value of this category must be set to:
 
@@ -199,7 +199,7 @@ A Complete example of how a desktop file must be formatted for the voice applica
 Terminal=false
 Type=Application
 Name=MyExampleSkill
-Exec=mycroft-gui-app --hideTextInput --skill=myexampleskill.authorname.home
+Exec=ovos-gui-app --hideTextInput --skill=myexampleskill.authorname.home
 Icon=myexampleskill_icon
 Categories=VoiceApp
 StartupNotify=false

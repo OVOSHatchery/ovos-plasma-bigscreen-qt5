@@ -101,7 +101,7 @@ Window {
         activeSkills.blackList: plasmoid.nativeInterface.applicationListModel.voiceAppSkills
 
         activeSkills.onBlacklistedSkillActivated: {
-            plasmoid.nativeInterface.executeCommand("mycroft-gui-app --hideTextInput --skill=" + skillId);
+            plasmoid.nativeInterface.executeCommand("ovos-gui-app --hideTextInput --skill=" + skillId);
         }
        // activeSkills.onSkillActivated: window.showMaximized();
         activeSkills.onActiveIndexChanged: {

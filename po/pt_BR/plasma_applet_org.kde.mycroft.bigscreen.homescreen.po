@@ -155,5 +155,3 @@ msgstr "A tela grande habilitou a inibição por todo o sistema"
 #~ msgid "Wireless"
 #~ msgstr "Rede sem fio"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Instalador de skills do Mycroft"

@@ -154,5 +154,3 @@ msgstr ""
 #~ msgid "Wireless"
 #~ msgstr "Nirkabel"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Penginstal Mycroft Skill"

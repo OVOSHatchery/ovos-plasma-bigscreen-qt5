@@ -73,8 +73,6 @@ add_subdirectory(sounds)
 plasma_install_package(shell org.kde.plasma.mycroft.bigscreen shells)
 plasma_install_package(lookandfeel org.kde.plasma.mycroft.bigscreen look-and-feel lookandfeel)
 
-
-install(FILES bin/mycroft-skill-launcher.py DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES org.kde.plasma.mycroft.bigscreen.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 include(KDEClangFormat)

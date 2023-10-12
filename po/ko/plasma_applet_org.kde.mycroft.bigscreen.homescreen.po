@@ -153,6 +153,3 @@ msgstr "큰 화면에서 시스템 전역 대기 모드 방지를 활성화함"
 
 #~ msgid "Wireless"
 #~ msgstr "무선"
-
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft 스킬 설치기"

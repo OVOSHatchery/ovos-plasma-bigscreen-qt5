@@ -154,5 +154,3 @@ msgstr "Bigscreen on ottanut käyttöön virranhallinnan yleiseston"
 #~ msgid "Wireless"
 #~ msgstr "Langaton"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft-kykyasentaja"

@@ -154,5 +154,3 @@ msgstr "A Bigscreen bekapcsolta a rendszerszintű tiltást"
 #~ msgid "Wireless"
 #~ msgstr "Vezeték nélküli"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Mycroft Skill telepítő"

@@ -155,5 +155,3 @@ msgstr "Veliki zaslon je omogočil sistemsko inhibicijo"
 #~ msgid "Wireless"
 #~ msgstr "Brezžično"
 
-#~ msgid "Mycroft Skill Installer"
-#~ msgstr "Namestilnik Mycroft Skill"
