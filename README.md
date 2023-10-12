@@ -9,20 +9,34 @@ This project is using various open-source components like Plasma Bigscreen, Open
 
 This is a fork from https://invent.kde.org/plasma/plasma-bigscreen/
 
-It moves from Mycroft to OVOS and modifies the application categories, "mycroft" is no longer optional and is integration is enabled by default
+Changes:
+- moves from Mycroft to OVOS 
+- "mycroft" is no longer optional and it's integration is enabled by default
+- Remove MycroftSkillInstaller (not OVOS compliant)
+- Remove "Recent" section
+- Remove generic "Applications" section
+- Add "Media" section
+- Add "Network" section
+- Add "Graphics" section
 
 ### Voice Control
 
 Bigscreen supports OpenVoiceOS, a free and open-source voice assistant that can be run completely decentralized on your own server.
+
+Download new apps (aka skills) for your Bigscreen or add your own ones for others to enjoy.
 
 ### Remote control your TV via CEC
 
 CEC (Consumer Electronics Control) is a standard to control devices over HDMI.
 Use your normal TV remote control, or a RC with built-in microphone for voice control and optional mouse simulation.
 
-### Voice apps
+### Application Launcher
 
-Download new apps (aka skills) for your Bigscreen or add your own ones for others to enjoy.
+Bigscreen replaces your DE, to stop an application from showing up you can edit `/etc/xdg/applications-blacklistrc`
+
+Adding new applications only requires a [.desktop file](https://specifications.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html)
+
+see [plasma-bigscreen/bigscreen-image-settings](https://invent.kde.org/plasma-bigscreen/bigscreen-image-settings) for more settings you might want to tweak in a Bigscreen image
 
 ## Installing from source
 
