@@ -5,6 +5,17 @@ Controllable via voice or TV remote.
 
 This project is using various open-source components like Plasma Bigscreen, OpenVoiceOS and libcec.
 
+- [Plasma Bigscreen - OVOS Edition](#plasma-bigscreen---ovos-edition)
+    + [Voice Control](#voice-control)
+    + [Remote control your TV via CEC](#remote-control-your-tv-via-cec)
+    + [Application Launcher](#application-launcher)
+  * [Installing from source](#installing-from-source)
+    + [KDE Plasma Dependencies](#kde-plasma-dependencies)
+    + [KDE KF5 dependencies](#kde-kf5-dependencies)
+    + [Qt dependencies](#qt-dependencies)
+  * [Running](#running)
+  * [Related repositories](#related-repositories)
+
 ![ovos-bigscreen](https://github.com/OpenVoiceOS/ovos-plasma-bigscreen/assets/33701864/afcc5e15-146b-4f38-be8d-0e5a56acaa55)
 
 This is a fork from https://invent.kde.org/plasma/plasma-bigscreen/
@@ -81,6 +92,8 @@ sudo make install
 - Network
 
 </details>
+
+## Running
 
 To start the Bigscreen homescreen in a window, run:
 
